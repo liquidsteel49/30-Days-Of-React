@@ -23,7 +23,10 @@
       const rootElement = document.querySelector('.root')
       
       const headerStyle = {
-        backgroundColor: '#61DBFB'
+        backgroundColor: '#61DBFB',
+        fontFamily: 'Helvetica',
+        padding: 25,
+        lineHeight: 1.5
       }
 
       // JSX element for the header part of the website
@@ -37,9 +40,16 @@
         </header>
       )
 
+      // JSX element, main
+      const mainStyles = {
+        backgroundColor: '#F3F0F5'
+      }
+
       // JSX element for the main part of the website
       const main = (
-        <main>
+        <main
+          style = {mainStyles}
+        >
             <p>Prerequisite to get started react.js</p>
             <ul>
                 <li>HTML</li>
@@ -49,9 +59,15 @@
         </main>
       )
 
+      const footerStyles = {
+        backgroundColor: '#61DBFB'
+      }
+
       // JSX element for the footer part of the website
       const footer = (
-        <footer>
+        <footer
+          style = {footerStyles}
+        >
             <p>Copyright 2020</p>
         </footer>
       )
