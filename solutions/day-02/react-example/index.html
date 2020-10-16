@@ -4,6 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>30 Days Of React Challenge</title>
+
+    <style>
+      /* == General style === */
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        line-height: 1.5;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        color: black;
+      }
+
+      .root {
+        min-height: 100%;
+        position: relative;
+      }
+
+      .header-wrapper,
+      .main-wrapper,
+      .footer-wrapper {
+        width: 85%;
+        margin: auto;
+      }
+
+      .header-wrapper,
+      .main-wrapper {
+        padding: 10px;
+        margin: 2px auto;
+      }
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+
+      header {
+        background-color: #61dbfb;
+        padding: 10px;
+      }
+
+      main {
+        padding: 10px;
+        padding-bottom: 60px;
+        /* Height of the footer */
+      }
+
+      ul {
+        margin-left: 15;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: #6cf;
+      }
+
+      .footer-wrapper {
+        font-weight: 400;
+        text-align: center;
+        line-height: 60px;
+      }
+    </style>
   </head>
 
   <body>
@@ -22,16 +101,10 @@
       // To get the root element from the HTML document
       const rootElement = document.querySelector('.root')
       
-      const headerStyle = {
-        backgroundColor: '#61DBFB',
-        fontFamily: 'Helvetica',
-        padding: 25,
-        lineHeight: 1.5
-      }
 
       // JSX element for the header part of the website
       const header = (
-        <header style={headerStyle}>
+        <header>
           <h1>Welcome to 30 Days Of React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
@@ -41,15 +114,10 @@
       )
 
       // JSX element, main
-      const mainStyles = {
-        backgroundColor: '#F3F0F5'
-      }
 
       // JSX element for the main part of the website
       const main = (
-        <main
-          style = {mainStyles}
-        >
+        <main>
             <p>Prerequisite to get started react.js</p>
             <ul>
                 <li>HTML</li>
@@ -59,15 +127,9 @@
         </main>
       )
 
-      const footerStyles = {
-        backgroundColor: '#61DBFB'
-      }
-
       // JSX element for the footer part of the website
       const footer = (
-        <footer
-          style = {footerStyles}
-        >
+        <footer>
             <p>Copyright 2020</p>
         </footer>
       )
