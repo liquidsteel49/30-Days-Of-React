@@ -125,15 +125,21 @@
 
       // JSX element, main
 
+      const techs = ['HTML', 'CSS', 'JavaScript']
+
       // JSX element for the main part of the website
       const main = (
         <main>
-            <p>Prerequisite to get started react.js</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+          <div className='main-wrapper'>
+            <p>
+              Prerequisite to get started {' '}
+              <strong>
+                <em>react.js</em>
+              </strong>
+              :
+            </p>
+            <ul>{techs}</ul>
+          </div>
         </main>
       )
 
