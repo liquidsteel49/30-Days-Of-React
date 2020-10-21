@@ -146,6 +146,7 @@
 
       // JSX element, main
       const techs = ['HTML', 'CSS', 'JavaScript']
+      const techsFromatted = techs.map((tech) => <li key={tech}>{tech}</li>)
 
       // JSX element for the main part of the website
       const main = (
@@ -158,7 +159,7 @@
               </strong>
               :
             </p>
-            <ul>{techs}</ul>
+            <ul>{techsFromatted}</ul>
             {result}
             {personAge}
           </div>
