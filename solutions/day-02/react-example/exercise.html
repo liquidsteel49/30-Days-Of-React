@@ -29,16 +29,13 @@
 
             const rootElement = document.querySelector('.root')
             
-            const name = [
-                {
+            const name = {
                 first: 'Alfredo',
                 last: 'Maldonado',
                 suffix: 'III'
-                }
-            ]
+            }
             
             const user = {
-                name: 
                 country: 'United States of America',
                 title: 'Learning Assistant',
                 sex: 'Male',
@@ -49,12 +46,29 @@
             // main
             const main = (
                 <div className="main-wrapper">
-                    <h1>Name: {user.name}</h1>
-                    <p>Country</p>
+                    <h1>Name: {name.first} {name.last} {name.suffix}</h1>
+                    <p>Country: {user.country}</p>
+                    <p>Title: {user.title}</p>
+                    <p>Sex: {user.sex}</p>
+                    <p>Email: {user.email}</p>
+                    <p>Phone: {user.phone}</p>
                 </div>
             )
 
-            ReactDOM.render(main, rootElement)
+            const footer = (
+                <div>
+                    <h3>This is a footer</h3>
+                </div>
+            )
+
+            const app = (
+                <div className="app">
+                    {main}
+                    {footer}
+                </div>
+            )
+
+            ReactDOM.render(app, rootElement)
         </script>
     </body>
 </html>
