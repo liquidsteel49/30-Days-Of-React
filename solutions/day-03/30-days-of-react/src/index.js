@@ -1,7 +1,9 @@
 // index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import levitate from './images/junior_state_levitate.jpg'
+import tech from './images/frontend_technologies.png'
+import { div } from 'prelude-ls'
 
 // JSX element variables, header
 const welcome = 'Welcome to 30 Days Of React'
@@ -37,7 +39,7 @@ const result = (
   </p>
 )
 
-const yearBorn = 1820
+const yearBorn = 1989
 const currentYear = new Date().getFullYear()
 const age = currentYear - yearBorn
 const personAge = (
@@ -50,6 +52,19 @@ const personAge = (
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map(tech => <li>{tech}</li>)
 
+const user = (
+  <div class="levitate">
+    <img src={levitate} alt='levitate cover art' />
+  </div>
+)
+
+const frontEndTech = (
+  <div class="tech">
+    <img src={tech} alt='images of technology used' />
+  </div>
+)
+
+
 // JSX element, main
 const main = (
   <main>
@@ -61,11 +76,13 @@ const main = (
         </strong>
         :
       </p>
+      {frontEndTech}
       <ul>
         {techsFormatted}
       </ul>
       {result}
       {personAge}
+      {user}
     </div>
   </main>
 )
@@ -73,10 +90,28 @@ const main = (
 //footer JSX variables
 const copyright = 'Copyright 2020'
 
+const subscribe = (
+  <div class="subcribe-form">
+    <h1>SUBSCRIBE{' '}</h1>
+    <p>Sign up with your email address to receive news and updates{' '}</p>
+    <form id="user-info" name="user-info">
+      <label for="fname"></label>
+      <input type="text" id="fname" name="fname"></input>
+      <label for="lname"></label>
+      <input type="text" id="lname" name="lname"></input>
+      <label for="email"></label>
+      <input type="text" id="email" name="email"></input>
+      {/* <button>Subscribe</button> */}
+    </form>
+    <button form="user-info">Subscribe</button>
+  </div>
+)
+
 // JSX element, footer
 const footer = (
   <footer>
     <div className="footer-wrapper">
+      {subscribe}
       <p>{copyright}</p>
     </div>
   </footer>
@@ -90,6 +125,7 @@ const app = (
     {footer}
   </div>
 )
+
 
 const rootElement = document.getElementById('root')
 // we render the JSX element using the ReactDOM package
