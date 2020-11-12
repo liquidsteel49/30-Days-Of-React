@@ -54,24 +54,26 @@ const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map(tech => <li>{tech}</li>)
 
 const album = (
-  <div class="levitate">
+  <div className="levitate">
     <img src={levitate} alt='levitate cover art' />
   </div>
 )
 
 const frontEndTech = (
-  <div class="tech">
+  <div className="tech">
     <img src={tech} alt='images of technology used' />
   </div>
 )
 
 const userCard = (
-  <div class="user-card">
-    <img class="profile" src={profile} /> {' '}
-    <h2>{author.firstName} {author.lastName} {' '}</h2>
+  <div className="user-card">
+    <img className="profile" src={profile} /> {' '}
+    <h2>{author.firstName} {author.lastName} {author.suffix} {' '}</h2>
     <p>Learning person</p>
     <h2>SKILLS</h2>
-    
+    <div className="skills">
+      {/* going to put all the skill bubbles here. Think about flexbox or <span> */}
+    </div>
   </div>
 )
 
@@ -91,8 +93,6 @@ const main = (
         {techsFormatted}
       </ul>
       {userCard}
-      {result}
-      {personAge}
       {album}
     </div>
   </main>
