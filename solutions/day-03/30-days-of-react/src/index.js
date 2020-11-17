@@ -88,7 +88,7 @@ const main = (
         </strong>
         :
       </p>
-      {frontEndTech}
+      {frontEndTech}4
       <ul>
         {techsFormatted}
       </ul>
