@@ -72,7 +72,13 @@ const userCard = (
     <p>Learning person</p>
     <h2>SKILLS</h2>
     <div className="skills">
-      {/* going to put all the skill bubbles here. Think about flexbox or <span> */}
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Sass</li>
+        <li>JS</li>
+        <li>React</li>
+      </ul>
     </div>
   </div>
 )
@@ -88,7 +94,7 @@ const main = (
         </strong>
         :
       </p>
-      {frontEndTech}4
+      {frontEndTech}
       <ul>
         {techsFormatted}
       </ul>
